@@ -4,9 +4,9 @@ This repo is a WIP.
 
 ## Information
 
-The main example token is `/contracts/TokenHolders.sol` and the `/contracts/TokenHoldersGov.sol`. Both of which were initially crafted in https://wizard.openzepplin.com and then supplemented in this repo. For development purpopses, both are wrapped in proxy contracts. 
+The main example token is `/contracts/TokenHolders.sol` and the `/contracts/TokenHoldersGov.sol`. Both of which were initially crafted in https://wizard.openzepplin.com and then supplemented in this repo. For development purposes, both are wrapped in proxy contracts. 
 
-There is an additional example in `/contracts/GameIndex/` which shows how to limit the ability of the DAO to only modify data in a single table, which is created on contract initialization. 
+There is an additional example in `/contracts/GameIndex/` which shows how to limit the ability of the DAO to only modify data in a single table (created on contract initialization).
 
 Finally, there is a WIP example using an NFT as the DAO membership token. 
 
@@ -46,6 +46,10 @@ REPORT_GAS=true
 ### Deploy to Gov contract to Mumbai
 
 `npm run deploy-gov`
+
+## Change example you deploy
+
+For now, you modify the contents of `scripts/deploy.ts` and `scripts/deploy-gov.ts` and `scripts/upgrade.ts` to point at the implementations in the `contracts/GameIndex` folder instead. Be sure to change their imports and the contract name they try to push. 
 
 # Warning
 
