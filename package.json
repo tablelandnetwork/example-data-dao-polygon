@@ -1,0 +1,38 @@
+{
+  "name": "hardhat-project",
+  "scripts": {
+    "tableland": "local-tableland",
+    "compile": "hardhat compile",
+    "local": "hardhat run --network localhost scripts/deploy.ts",
+    "localup": "hardhat run --network localhost scripts/upgrade.ts",
+    "deploy": "npm run _deploy && npm run verify",
+    "deploy-gov": "npm run _deploy-gov && npm run verify-gov",
+    "_deploy": "hardhat run --network polygon_mumbai scripts/deploy.ts",
+    "_deploy-gov": "hardhat run --network polygon_mumbai scripts/deploy-gov.ts",
+    "upgrade": "npm run _upgrade && npm run verify",
+    "_upgrade": "hardhat run --network polygon_mumbai scripts/upgrade.ts",
+    "verify": "source .polygon_mumbai.env && hardhat verify $CONTRACT --network polygon_mumbai",
+    "verify-gov": "source .polygon_mumbai.gov.env && hardhat verify $CONTRACT --network polygon_mumbai",
+    "prettier": "prettier '**/*.{ts,json,sol,md}' --check",
+    "prettier:fix": "npm run prettier -- --write"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "2.0.0",
+    "@nomiclabs/hardhat-ethers": "2.2.1",
+    "@openzeppelin/contracts-upgradeable": "4.8.0",
+    "@openzeppelin/hardhat-upgrades": "1.21.0",
+    "@tableland/evm": "3.0.3",
+    "@tableland/local": "0.0.4",
+    "@typechain/hardhat": "6.1.5",
+    "dotenv": "16.0.3",
+    "erc721a-upgradeable": "4.2.3",
+    "hardhat": "2.12.4",
+    "hardhat-gas-reporter": "1.0.9",
+    "prettier": "2.8.1",
+    "prettier-plugin-solidity": "1.1.0",
+    "solidity-coverage": "0.8.2"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "0.5.1"
+  }
+}
