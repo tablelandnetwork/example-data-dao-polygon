@@ -28,9 +28,6 @@ contract GameIndex is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable,
     ITablelandTables _tableland;
 
     // Note: Added to track tables created by the contract
-    string[] _names;
-    mapping(uint256 => string) private _tableNames;
-    mapping(string => uint256) private _tableIds;
     string public gameIndexTable;
     uint256 public gameIndexTableId;
 
