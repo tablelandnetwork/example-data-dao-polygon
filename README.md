@@ -8,7 +8,7 @@ The main example token is `/contracts/TokenHolders.sol` and the `/contracts/Toke
 
 There is an additional example in `/contracts/GameIndex/` which shows how to limit the ability of the DAO to only modify data in a single table (created on contract initialization).
 
-Finally, there is a WIP example using an NFT as the DAO membership token. 
+Finally, there is an example using NFT for membership instead of ERC20 in `/contracts/NFTMembership`.
 
 ## Governance
 
